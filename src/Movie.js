@@ -5,12 +5,12 @@ import './Movie.css';
 
 export default function Movie({ id, year, title, poster, summary }) {
   return (
-    <div class='movie'>
-      <img class='movie__poster' src={poster} alt={title} />
-      <div class='movie__info'>
-        <h3 class='movie__title'>{title}</h3>
-        <h5 class='moive__year'>{year}</h5>
-        <p class='movie__summary'>{summary}</p>
+    <div className='movie'>
+      <img className='movie__poster' src={poster} alt={title} />
+      <div className='movie__info'>
+        <h3 className='movie__title'>{title}</h3>
+        <h5 className='moive__year'>{year}</h5>
+        <p className='movie__summary'>{summary}</p>
       </div>
     </div>
   );
