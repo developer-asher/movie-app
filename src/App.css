@@ -1,1 +1,45 @@
 @charset 'utf-8';
+:root {
+  --font-size: 14px;
+  --base-space: 10px;
+  --updown-space: 70px;
+  --movie-bg-color: white;
+}
+
+/* common */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background-color: #eff3f7;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+ul {
+  margin: 0;
+}
+ul {
+  margin-left: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+}
+.movies {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: var(--updown-space) auto 0;
+}
