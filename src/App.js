@@ -18,7 +18,6 @@ class App extends Component {
       'https://yts-proxy.nomadcoders1.now.sh/list_movies.json?sort_by=rating',
     );
     this.setState({ movies: movies, isLoading: false }); //state: data
-    console.log(movies);
   };
 
   componentDidMount() {
