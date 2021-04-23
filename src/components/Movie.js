@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes, { string } from 'prop-types';
+import { HashRouter, Link } from 'react-router-dom';
 import { render } from 'react-dom';
 import './Movie.css';
 
@@ -11,7 +12,23 @@ export default function Movie({ id, year, title, poster, summary, genres }) {
     <div className='movie'>
       <img className='movie__poster' src={poster} alt={title} />
       <div className='movie__info'>
-        <h3 className='movie__title'>{title}</h3>
+        <h3 className='movie__title'>
+          <Link
+            to={{
+              pathname: `/movie/${id}`,
+              state: {
+                id, //
+                year,
+                title,
+                poster,
+                summary,
+                genres,
+              },
+            }}
+          >
+            {title}
+          </Link>
+        </h3>
         <h5 className='moive__year'>{year}</h5>
         <ul className='movie__genres'>
           {genres.map((genre, index) => (
