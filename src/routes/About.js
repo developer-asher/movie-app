@@ -1,5 +1,6 @@
 import React from 'react';
+import './About.css';
 
 export default function About() {
-  return <div>ABOUT</div>;
+  return <div className='about__container'>ABOUT</div>;
 }
